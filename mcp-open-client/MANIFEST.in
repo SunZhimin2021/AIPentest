@@ -1,0 +1,21 @@
+include README.md
+include LICENSE
+include pyproject.toml
+include requirements.txt
+
+# Include all settings files
+recursive-include mcp_open_client/settings *.json *.css
+
+# Include all UI files
+recursive-include mcp_open_client/ui *.py
+
+# Exclude development and cache files
+global-exclude *.pyc
+global-exclude *.pyo
+global-exclude *.orig
+global-exclude *.rej
+global-exclude __pycache__
+global-exclude .git*
+global-exclude .DS_Store
+global-exclude *.so
+global-exclude *.dylib

@@ -1,0 +1,189 @@
+
+/* Remove gray background from chat scroll area */
+.chat-messages .q-scrollarea__content {
+    background: transparent !important;
+}
+
+.chat-messages.q-scrollarea--dark {
+    background: transparent !important;
+}
+
+/* Remove horizontal padding from tab panels */
+.q-tab-panels {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+.q-tab-panel {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+/* Subtle typing animations for game feel */
+.chat-input-field {
+    transition: box-shadow 0.2s ease;
+}
+
+.chat-input-field:focus {
+    box-shadow: 0 0 10px rgba(59, 130, 246, 0.3);
+}
+
+/* Button hover effect */
+.q-btn {
+    transition: transform 0.1s ease;
+}
+
+.q-btn:hover {
+    transform: scale(1.05);
+}
+
+/* Message appear animation */
+.user-message, .assistant-message {
+    animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+}
+
+/* Global strong tag styling - force normal text size */
+strong {
+    font-weight: 600 !important;
+    font-size: 1rem !important;
+    display: inline !important;
+}
+
+/* Override markdown content */
+.nicegui-markdown strong {
+    font-weight: 600 !important;
+    font-size: 1rem !important;
+}
+
+/* Force override headings with strong tags */
+.nicegui-markdown h1 strong,
+.nicegui-markdown h2 strong,
+.nicegui-markdown h3 strong,
+.nicegui-markdown h4 strong,
+.nicegui-markdown h5 strong,
+.nicegui-markdown h6 strong {
+    font-weight: 600 !important;
+    font-size: 1rem !important;
+}
+
+/* Override table strong tags */
+.nicegui-markdown table strong,
+.nicegui-markdown th strong,
+.nicegui-markdown td strong {
+    font-weight: 600 !important;
+    font-size: 1rem !important;
+}
+
+
+/* Reduce markdown content spacing */
+.nicegui-markdown {
+    margin: 0 !important;
+}
+
+.nicegui-markdown p {
+    margin: 0.25rem 0 !important;
+}
+
+.nicegui-markdown h1,
+.nicegui-markdown h2,
+.nicegui-markdown h3,
+.nicegui-markdown h4,
+.nicegui-markdown h5,
+.nicegui-markdown h6 {
+    margin: 0.5rem 0 0.25rem 0 !important;
+}
+
+.nicegui-markdown ul,
+.nicegui-markdown ol {
+    margin: 0.25rem 0 !important;
+    padding-left: 1.5rem !important;
+}
+
+.nicegui-markdown li {
+    margin: 0.1rem 0 !important;
+}
+
+/* Remove padding from message container */
+.nicegui-column {
+    padding: 0 !important;
+}
+
+/* Global notification position - top center */
+.q-notifications {
+    top: 20px !important;
+    bottom: auto !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    right: auto !important;
+}
+
+/* Responsive cards for home page */
+.card-responsive {
+    width: 100%;
+    min-width: 280px;
+    max-width: 400px;
+    flex: 1 1 300px;
+}
+
+@media (max-width: 768px) {
+    .card-responsive {
+        min-width: 100%;
+        max-width: 100%;
+        flex: 1 1 100%;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .card-responsive {
+        flex: 1 1 calc(50% - 1rem);
+        max-width: calc(50% - 1rem);
+    }
+}
+
+@media (min-width: 1025px) {
+    .card-responsive {
+        flex: 1 1 calc(33.333% - 1rem);
+        max-width: calc(33.333% - 1rem);
+}
+
+/* Responsive server cards for MCP servers page */
+.server-card-responsive {
+    width: 100%;
+    min-width: 320px;
+    max-width: 450px;
+    flex: 1 1 350px;
+}
+
+@media (max-width: 768px) {
+    .server-card-responsive {
+        min-width: 100%;
+        max-width: 100%;
+        flex: 1 1 100%;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1200px) {
+    .server-card-responsive {
+        flex: 1 1 calc(50% - 1rem);
+        max-width: calc(50% - 1rem);
+    }
+}
+
+@media (min-width: 1201px) {
+    .server-card-responsive {
+        flex: 1 1 calc(33.333% - 1rem);
+        max-width: calc(33.333% - 1rem);
+    }
+}
+}
+}
